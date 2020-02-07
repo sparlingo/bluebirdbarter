@@ -11,9 +11,6 @@
       <b-navbar-item href="#">
         Home
       </b-navbar-item>
-      <b-navbar-item href="/players">
-        Players
-      </b-navbar-item>
       <b-navbar-dropdown label="Info">
         <b-navbar-item href="#">
           About
@@ -85,7 +82,7 @@ export default {
     loginModal() {
       this.$buefy.modal.open({
         parent: this,
-        component: ModalForm,
+        component: ModalLogin,
         hasModalCard: true,
         customClass: '',
         trapFocus: true

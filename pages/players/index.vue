@@ -1,5 +1,5 @@
 <template>
-    <div class="container is-fluid">
+    <div class="container">
         <h1 class="title">Players</h1>
 
         <div class="buttons">

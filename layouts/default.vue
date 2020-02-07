@@ -1,8 +1,8 @@
 <template>
   <div>
     <Navbar />
-    <section class="main-content columns">
-      <aside class="column is-2 section">
+    <section class="main-content columns is-1">
+      <aside class="column is-1 section">
         <p class="menu-label is-hidden-touch">
           Menu
         </p>
@@ -21,7 +21,7 @@
         </ul>
       </aside>
 
-      <div class="container column is-10">
+      <div class="container column is-11">
         <nuxt />
       </div>
     </section>
@@ -35,17 +35,17 @@ export default {
     return {
       items: [
         {
-          title: 'Home',
+          // title: 'Home',
           icon: 'home',
           to: { name: 'index' }
         },
         {
-          title: 'Inspire',
+          // title: 'Research',
           icon: 'lightbulb',
-          to: { name: 'inspire' }
+          to: { name: 'research' }
         },
         {
-          title: 'Players',
+          // title: 'Players',
           icon: 'baseball',
           to: { name: 'players' }
         }

@@ -82,7 +82,7 @@ export default {
     loginModal() {
       this.$buefy.modal.open({
         parent: this,
-        component: ModalLogin,
+        component: ModalForm,
         hasModalCard: true,
         customClass: '',
         trapFocus: true

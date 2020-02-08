@@ -1,9 +1,10 @@
 <template>
   <section class="section">
-    <div class="columns is-mobile">
+    <h1 class="title">Research</h1>
+    <div class="columns is-mobile container">
 
       <card
-        title="Free"
+        title="The Blue Jays"
         icon="github-circle"
       >
         Open source on <a href="https://github.com/buefy/buefy">
@@ -12,12 +13,12 @@
       </card>
 
       <card
-        title="Responsive"
+        title="Sabermetrics"
         icon="cellphone-link"
       >
         <b class="has-text-grey">
-          Every
-        </b> component is responsive
+          What the hell is Sabermetrics?
+        </b> 
       </card>
 
       <card

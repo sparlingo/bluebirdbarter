@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Navbar />
+    <!-- <Navbar /> -->
     <section class="main-content columns is-1">
-      <aside class="column is-1 section">
+      <div class="column is-narrow section">
         <p class="menu-label is-hidden-touch">
           Menu
         </p>
@@ -15,13 +15,15 @@
               :to="item.to"
               exact-active-class="is-active"
             >
-              <b-icon :icon="item.icon" /> {{ item.title }}
+              <b-tooltip :label="item.title">
+                <b-icon :icon="item.icon" /> 
+              </b-tooltip>
             </nuxt-link>
           </li>
         </ul>
-      </aside>
+      </div>
 
-      <div class="container column is-11">
+      <div class="column is-11">
         <nuxt />
       </div>
     </section>
@@ -35,19 +37,24 @@ export default {
     return {
       items: [
         {
-          // title: 'Home',
+          title: 'Home',
           icon: 'home',
           to: { name: 'index' }
         },
         {
-          // title: 'Research',
+          title: 'Research',
           icon: 'lightbulb',
           to: { name: 'research' }
         },
         {
-          // title: 'Players',
+          title: 'Players',
           icon: 'baseball',
           to: { name: 'players' }
+        },
+        {
+          title: 'Login',
+          icon: 'door',
+          to: { name: 'login' }
         }
       ]
     }

@@ -51,12 +51,12 @@ module.exports = {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    baseURL: 'http://localhost:3000',
+    baseURL: 'http://localhost:1337',
     //proxy: true
   },
-  proxy: {
-    '/api': 'http://localhost:3000/api'
-  },
+  // proxy: {
+  //   '/api': 'http://localhost:3000/api'
+  // },
   auth: {
     strategies: {
       local: {

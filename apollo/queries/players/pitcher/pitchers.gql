@@ -1,0 +1,14 @@
+query allPitchers {
+  pitchers {
+    id
+    name
+    bbRefId
+    startOrRelief
+    throws
+    profile {
+      size
+      url
+    }
+    seasons
+  }
+}

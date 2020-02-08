@@ -1,0 +1,14 @@
+query allHitters {
+  hitters {
+    id
+    name
+    bbRefId
+    position
+    hits
+    profile {
+      size
+      url
+    }
+    seasons
+  }
+}

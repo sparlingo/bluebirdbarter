@@ -6,7 +6,7 @@
           <h2 class="title">Register</h2>
 
           <Notification :message="error" v-if="error" />
-          <form method="post" :model="form" @submit.prevent="register">
+          <form method="post" @submit.prevent="register">
             <div class="field">
               <label class="label">Username</label>
               <div class="control">

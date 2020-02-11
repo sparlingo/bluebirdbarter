@@ -31,7 +31,6 @@
 </template>
 
 <script>
-import Navbar from '../components/Navbar'
 export default {
   data () {
     return {
@@ -52,15 +51,12 @@ export default {
           to: { name: 'players' }
         },
         {
-          title: 'Login',
+          title: 'Register',
           icon: 'door',
-          to: { name: 'login' }
+          to: { name: 'register' }
         }
       ]
     }
-  },
-  components: {
-    Navbar
   }
 }
 </script>

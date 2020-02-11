@@ -45,7 +45,8 @@ module.exports = {
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
-    '@nuxtjs/apollo'
+    '@nuxtjs/apollo',
+    '@nuxtjs/auth'
   ],
   apollo: {
     clientConfigs: {
@@ -59,23 +60,22 @@ module.exports = {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    //baseURL: 'http://localhost:1337',
-    //proxy: true
+    //baseURL: 'http://localhost:8000/api/users/',
+    proxy: true
   },
-  // proxy: {
-  //   '/api': 'http://localhost:3000/api'
-  // },
+  proxy: {
+    '/api': 'http://localhost:8000/api'
+  },
   auth: {
     strategies: {
       local: {
         endpoints: {
-          login: { url: '/api/users/login', method: 'post', propertyName: 'token' },
-          logout: { url: '/api/users/logout', method: 'post' },
+          login: { url: '/api/login', method: 'post', propertyName: 'token' },
+          // logout: { url: 'logout', method: 'post' },
           register: { url: '/api/users/register', method: 'post' },
-          user: { url: '/users/me', method: 'get', propertyName: 'data' }
-        },
-        tokenRequired: false, 
-        tokenType: false
+          user: { url: 'me', method: 'get', propertyName: 'data' },
+          logout: false
+        }
       }
     }
   },

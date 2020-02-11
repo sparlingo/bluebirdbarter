@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <h1 class="title">Research</h1>
+    <h2 class="title">Research</h2>
     <div class="columns is-mobile container">
 
       <card

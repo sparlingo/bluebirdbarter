@@ -12,8 +12,8 @@
     </div>
     <div class="hero-body">
       <div class="container">
-        <SuperSecretDiv v-if="$auth.loggedIn" />
-        <a @click="$auth.loginWith('auth0')"><button>Sign In</button></a>
+        <SuperSecretDiv v-if="isloggedIn" />
+        <a v-on:click="triggerNetlifyIdentityAction('login')"><button>Sign In</button></a>
         <nav class="level">
           <div class="level-item has-text-centered">
             <div>
@@ -52,12 +52,41 @@ h1.title {
 </style>
 
 <script>
+import netlifyIdentity from "netlify-identity-widget";
+import { mapActions, mapState } from "vuex";
 import SuperSecretDiv from '~/components/SuperSecret'
+
+netlifyIdentity.init();
 
 export default {
   name: 'HomePage',
   components: {
     SuperSecretDiv
+  },
+  computed: mapState({
+    isLoggedIn: state => state.user.currentUser
+  }),
+  methods: {
+    ...mapActions({
+      setUser: 'user/setUser'
+    }),
+    circumvent() {
+      window.localStorage.setItem('user', true);
+      location.reload(true);
+    },
+    triggerNetlifyIdentityAction(action) {
+      if (action == "login" || action == "signup") {
+        netlifyIdentity.open(action);
+        netlifyIdentity.on(action, user => {
+          this.setUser(user);
+          netlifyIdentity.close();
+        });
+      } else if (action == "logout") {
+        this.setUser(null);
+        netlifyIdentity.logout();
+        this.$router.push('/');
+      }
+    }
   }
 }
 </script>

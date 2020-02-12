@@ -85,13 +85,13 @@ module.exports = {
       //   client_id: '54f80cbbfe1ddb38e9ed',
       //   client_secret: '35550f038d10b3610d1065a414ddedfed2f57bca'
       // },
-    strategies: {
-      auth0: {
-        domain: 'sparlingo.auth0.com',
-        client_id: 'yhBWDsauIwnk5mVonVFxHGLiUJzSEvbp',
-        audience: 'https://sparlingo.auth0.com/api/v2/'
-      }
-    },
+    // strategies: {
+    //   auth0: {
+    //     domain: 'sparlingo.auth0.com',
+    //     client_id: 'yhBWDsauIwnk5mVonVFxHGLiUJzSEvbp',
+    //     audience: 'https://sparlingo.auth0.com/api/v2/'
+    //   }
+    // },
   },
   /*
   ** Build configuration

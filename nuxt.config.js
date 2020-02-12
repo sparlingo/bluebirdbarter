@@ -89,7 +89,7 @@ module.exports = {
       auth0: {
         domain: 'sparlingo.auth0.com',
         client_id: 'yhBWDsauIwnk5mVonVFxHGLiUJzSEvbp',
-        audience: 'https://bluebirdbarter.netlify.com/'
+        audience: 'https://sparlingo.auth0.com/api/v2/'
       }
     },
   },

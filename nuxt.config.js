@@ -60,7 +60,7 @@ module.exports = {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    baseURL: 'http://localhost:8000/api/users',
+    baseURL: 'http://localhost:8000',
     //proxy: true
   },
   proxy: {
@@ -68,15 +68,19 @@ module.exports = {
   },
   auth: {
     strategies: {
-      local: {
-        endpoints: {
-          login: { url: 'login', method: 'post', propertyName: 'token' },
-          // logout: { url: 'logout', method: 'post' },
-          register: { url: 'register', method: 'post' },
-          user: { url: 'me', method: 'get', propertyName: 'data' },
-          logout: false
-        }
-      }
+      // local: {
+      //   endpoints: {
+      //     login: { url: '/api/users/login', method: 'post', propertyName: 'token' },
+      //     // logout: { url: 'logout', method: 'post' },
+      //     register: { url: '/api/users/register', method: 'post' },
+      //     user: { url: 'me', method: 'get', propertyName: 'data' },
+      //     logout: false
+      //   }
+      // }
+      github: {
+        client_id: '54f80cbbfe1ddb38e9ed',
+        client_secret: '35550f038d10b3610d1065a414ddedfed2f57bca'
+      },
     }
   },
   /*

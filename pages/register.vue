@@ -57,12 +57,12 @@ export default {
   methods: {
     async register() {
       try {
-        await this.$axios.post('register', {
+        await this.$axios.$post('register', {
           username: this.username,
           email: this.email,
           password: this.password
         })
-        await this.$auth.loginWith('local', {
+        await this.$auth.loginWith('github', {
           data: {
             email: this.email,
             password: this.password

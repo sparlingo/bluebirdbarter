@@ -1,29 +1,44 @@
 <template>
   <div>
-    <!-- <Navbar /> -->
+    <Navbar />
     <section class="main-content columns is-1">
-      <div class="column is-narrow section">
+      <div class="column is-narrow section is-hidden-mobile">
         <p class="menu-label is-hidden-touch">
           Menu
         </p>
         <ul class="menu-list">
-          <li
-            v-for="(item, key) of items"
-            :key="key"
-          >
-            <nuxt-link
-              :to="item.to"
-              exact-active-class="is-active"
-            >
-              <b-tooltip :label="item.title">
-                <b-icon :icon="item.icon" /> 
+          <li>
+            <nuxt-link to="/" exact-active-class="is-active">
+              <b-tooltip label="Home">
+                <b-icon icon="home" /> 
               </b-tooltip>
             </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link to="/research" exact-active-class="is-active">
+              <b-tooltip label="Research">
+                <b-icon icon="lightbulb" /> 
+              </b-tooltip>
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link to="/players" exact-active-class="is-active">
+              <b-tooltip label="Players">
+                <b-icon icon="baseball" /> 
+              </b-tooltip>
+            </nuxt-link>
+          </li>
+          <li v-if="!isLoggedIn">
+            <a v-on:click="triggerNetlifyIdentityAction('login')">
+              <b-tooltip label="Login">
+                <b-icon icon="door" /> 
+              </b-tooltip>
+            </a>
           </li>
         </ul>
       </div>
 
-      <div class="column is-11">
+      <div class="column is-12">
         <nuxt />
       </div>
     </section>
@@ -31,36 +46,36 @@
 </template>
 
 <script>
+import Navbar from "../components/Navbar"
+import netlifyIdentity from "netlify-identity-widget";
+import { mapActions, mapState } from "vuex";
+
+netlifyIdentity.init();
+
 export default {
-  // head() {
-  //   return {
-  //     script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
-  //   };
-  // },
-  data () {
-    return {
-      items: [
-        {
-          title: 'Home',
-          icon: 'home',
-          to: { name: 'index' }
-        },
-        {
-          title: 'Research',
-          icon: 'lightbulb',
-          to: { name: 'research' }
-        },
-        {
-          title: 'Players',
-          icon: 'baseball',
-          to: { name: 'players' }
-        },
-        {
-          title: 'Register',
-          icon: 'door',
-          to: { name: 'register' }
-        }
-      ]
+  computed: mapState({
+    isLoggedIn: state => state.user.currentUser
+  }),
+  methods: {
+    ...mapActions({
+      setUser: 'user/setUser'
+    }),
+    circumvent() {
+      window.localStorage.setItem('user', true);
+      location.reload(true);
+    },
+    triggerNetlifyIdentityAction(action) {
+      if (action == "login" || action == "signup") {
+        netlifyIdentity.open(action);
+        netlifyIdentity.on(action, user => {
+          this.setUser(user);
+          netlifyIdentity.close();
+        });
+      } else if (action == "logout") {
+        this.setUser(null);
+        netlifyIdentity.logout();
+        this.$router.push('/');
+      }
     }
   }
 }

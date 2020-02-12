@@ -6,10 +6,11 @@
       <card
         title="The Blue Jays"
         icon="github-circle"
+        noIcon
       >
-        Open source on <a href="https://github.com/buefy/buefy">
-          GitHub
-        </a>
+        <b class="has-text-grey">
+          Some interesting data about the franchise
+        </b>
       </card>
 
       <card

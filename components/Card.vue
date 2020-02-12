@@ -6,13 +6,18 @@
           {{ title }}
         </p>
       </header>
-      <div class="card-content">
-        <div class="content has-text-centered">
+      <div class="card-content" v-bind:class="{ 'noIcon': noIcon }">
+        <div v-if="!noIcon" class="content has-text-centered">
           <b-icon
             :icon="icon"
             size="is-large"
             type="is-primary"
           />
+        </div>
+         <div v-else class="content has-text-centered">
+          <figure class="image is-128x128">
+            <img src="~/assets/jays.png">
+          </figure>
         </div>
       </div>
       <footer class="card-footer">
@@ -35,7 +40,11 @@ export default {
     },
     icon: {
       type: String,
-      required: true
+      required: false
+    },
+    noIcon: {
+      type: Boolean,
+      required: false
     }
   }
 }

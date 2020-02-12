@@ -13,7 +13,6 @@
     <div class="hero-body">
       <div class="container">
         <SuperSecretDiv v-if="isLoggedIn" />
-        <a v-on:click="triggerNetlifyIdentityAction('login')"><button>Sign In</button></a>
         <nav class="level">
           <div class="level-item has-text-centered">
             <div>

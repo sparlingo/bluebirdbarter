@@ -1,6 +1,6 @@
 
 module.exports = {
-  mode: 'universal',
+  mode: 'spa',
   /*
   ** Headers of the page
   */
@@ -67,7 +67,11 @@ module.exports = {
     //'/api': 'http://localhost:8000/api'
   },
   auth: {
-    strategies: {
+    redirect: {
+      login: '/', // redirect user when not connected
+      callback: '/auth/signed-in'
+    },
+  //   strategies: {
       // local: {
       //   endpoints: {
       //     login: { url: '/api/users/login', method: 'post', propertyName: 'token' },
@@ -77,11 +81,17 @@ module.exports = {
       //     logout: false
       //   }
       // }
-      github: {
-        client_id: '54f80cbbfe1ddb38e9ed',
-        client_secret: '35550f038d10b3610d1065a414ddedfed2f57bca'
-      },
-    }
+      // github: {
+      //   client_id: '54f80cbbfe1ddb38e9ed',
+      //   client_secret: '35550f038d10b3610d1065a414ddedfed2f57bca'
+      // },
+    strategies: {
+      auth0: {
+        domain: 'sparlingo.auth0.com',
+        client_id: 'yhBWDsauIwnk5mVonVFxHGLiUJzSEvbp',
+        audience: 'https://bluebirdbarter.netlify.com/'
+      }
+    },
   },
   /*
   ** Build configuration

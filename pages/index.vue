@@ -12,6 +12,8 @@
     </div>
     <div class="hero-body">
       <div class="container">
+        <SuperSecretDiv v-if="$auth.loggedIn" />
+        <a @click="$auth.loginWith('auth0')"><button>Sign In</button></a>
         <nav class="level">
           <div class="level-item has-text-centered">
             <div>
@@ -50,7 +52,12 @@ h1.title {
 </style>
 
 <script>
+import SuperSecretDiv from '~/components/SuperSecret'
+
 export default {
-  name: 'HomePage'
+  name: 'HomePage',
+  components: {
+    SuperSecretDiv
+  }
 }
 </script>

@@ -862,6 +862,30 @@
     ts-node "^8"
     tslib "^1"
 
+"@fortawesome/fontawesome-common-types@^0.2.27":
+  version "0.2.27"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.27.tgz#19706345859fc46adf3684ed01d11b40903b87e9"
+  integrity sha512-97GaByGaXDGMkzcJX7VmR/jRJd8h1mfhtA7RsxDBN61GnWE/PPCZhOdwG/8OZYktiRUF0CvFOr+VgRkJrt6TWg==
+
+"@fortawesome/fontawesome-svg-core@^1.2.12":
+  version "1.2.27"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.27.tgz#e4db8e3be81a40988213507c3e3d0c158a6641a3"
+  integrity sha512-sOD3DKynocnHYpuw2sLPnTunDj7rLk91LYhi2axUYwuGe9cPCw7Bsu9EWtVdNJP+IYgTCZIbyARKXuy5K/nv+Q==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.27"
+
+"@fortawesome/free-solid-svg-icons@^5.12.1":
+  version "5.12.1"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.12.1.tgz#76b6f958a3471821ff146f8f955e6d7cfe87147c"
+  integrity sha512-k3MwRFFUhyL4cuCJSaHDA0YNYMELDXX0h8JKtWYxO5XD3Dn+maXOMrVAAiNGooUyM2v/wz/TOaM0jxYVKeXX7g==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.27"
+
+"@fortawesome/vue-fontawesome@^0.1.4":
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/@fortawesome/vue-fontawesome/-/vue-fontawesome-0.1.9.tgz#d3af6d4e50f337327de90447fe35fa1e117a2fbe"
+  integrity sha512-h/emhmZz+DfB2zOGLWawNwXq82UYhn9waTfUjLLmeaIqtnIyNt6kYlpQT/vzJjLZRDRvY2IEJAh1di5qKpKVpA==
+
 "@nuxt/babel-preset-app@2.11.0":
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/@nuxt/babel-preset-app/-/babel-preset-app-2.11.0.tgz#e89fdb7ef5c08dce13532ccf63a7064399f67ab0"
@@ -1139,6 +1163,13 @@
     axios-retry "^3.1.2"
     consola "^2.11.3"
     defu "^1.0.0"
+
+"@nuxtjs/bulma@^1.2.6":
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/bulma/-/bulma-1.2.6.tgz#0885722545e99907e994878b987e5c872eaae6e3"
+  integrity sha512-h/YPxtbo40OkxL/wQnDsh/9Vu6V0RGFu7uaR4NB77Qe4xDUZPZiA7DKTTBGrJ0gXsVZH2xOQadMT3GqyhdM9Ww==
+  dependencies:
+    bulma "^0.8.0"
 
 "@nuxtjs/dotenv@^1.4.1":
   version "1.4.1"
@@ -2807,13 +2838,6 @@ browserslist@^4.0.0, browserslist@^4.6.4, browserslist@^4.8.3, browserslist@^4.8
     electron-to-chromium "^1.3.341"
     node-releases "^1.1.47"
 
-buefy@^0.8.10:
-  version "0.8.10"
-  resolved "https://registry.yarnpkg.com/buefy/-/buefy-0.8.10.tgz#e00a9e9ced4babcf01ada300c451fafced2a2b42"
-  integrity sha512-Lw/UP3Ku7o+oqam9TIoRMG5SrytGQwXWAoxAtqt6Wb9eSsMEqp/5o+jZnz8oteR06YWgjdSIfOv2YeEdjEkQCg==
-  dependencies:
-    bulma "0.7.5"
-
 buffer-from@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/buffer-from/-/buffer-from-1.1.1.tgz#32713bc028f75c02fdb710d7c7bcec1f2c6070ef"
@@ -2843,10 +2867,10 @@ builtin-status-codes@^3.0.0:
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
   integrity sha1-hZgoeOIbmOHGZCXgPQF0eI9Wnug=
 
-bulma@0.7.5:
-  version "0.7.5"
-  resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.7.5.tgz#35066c37f82c088b68f94450be758fc00a967208"
-  integrity sha512-cX98TIn0I6sKba/DhW0FBjtaDpxTelU166pf7ICXpCCuplHWyu6C9LYZmL5PEsnePIeJaiorsTEzzNk3Tsm1hw==
+bulma@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.8.0.tgz#ac1606431703a4761b18a4a2d5cc1fa864a2aece"
+  integrity sha512-nhf3rGyiZh/VM7FrSJ/5KeLlfaFkXz0nYcXriynfPH4vVpnxnqyEwaNGdNCVzHyyCA3cHgkQAMpdF/SFbFGZfA==
 
 busboy@^0.3.1:
   version "0.3.1"
@@ -6589,12 +6613,13 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-nuxt-buefy@^0.3.20:
-  version "0.3.21"
-  resolved "https://registry.yarnpkg.com/nuxt-buefy/-/nuxt-buefy-0.3.21.tgz#c46b9de05470912371c04a9fe402da1a75ab191c"
-  integrity sha512-Vjl2npGWGISyewGrXsTeKpFWAOievI8D+Tt0tC2Yx0FQB3xOrEW8uGkdDkEzNKTbvM/1jkjA3wv2X+YhClv2yA==
+nuxt-fontawesome@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/nuxt-fontawesome/-/nuxt-fontawesome-0.4.0.tgz#e1ea0cdda9ec6785739a86e9e3d42f62a8c10443"
+  integrity sha512-4oHIot/WLUBFM7o944EQks7WmntD/YsLxZ+g9mJjY9pHw1FJZBaD7Bd+cDsXvl3h/0/f87QwIXf/AA+vOIY0Ag==
   dependencies:
-    buefy "^0.8.10"
+    "@fortawesome/fontawesome-svg-core" "^1.2.12"
+    "@fortawesome/vue-fontawesome" "^0.1.4"
 
 nuxt@^2.11.0:
   version "2.11.0"

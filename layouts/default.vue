@@ -2,37 +2,29 @@
   <div>
     <Navbar />
     <section class="main-content columns is-1">
-      <div class="column is-narrow section is-hidden-mobile">
+      <div class="column is-narrow section">
         <p class="menu-label is-hidden-touch">
           Menu
         </p>
         <ul class="menu-list">
           <li>
             <nuxt-link to="/" exact-active-class="is-active">
-              <b-tooltip label="Home">
-                <b-icon icon="home" /> 
-              </b-tooltip>
+              <fa :icon="fas.faHome" />
             </nuxt-link>
           </li>
           <li>
             <nuxt-link to="/research" exact-active-class="is-active">
-              <b-tooltip label="Research">
-                <b-icon icon="lightbulb" /> 
-              </b-tooltip>
+              <fa :icon="faBook" />
             </nuxt-link>
           </li>
           <li>
             <nuxt-link to="/players" exact-active-class="is-active">
-              <b-tooltip label="Players">
-                <b-icon icon="baseball" /> 
-              </b-tooltip>
+              <fa :icon="fas.faBall" />
             </nuxt-link>
           </li>
           <li v-if="!isLoggedIn">
             <a v-on:click="triggerNetlifyIdentityAction('login')">
-              <b-tooltip label="Login">
-                <b-icon icon="door" /> 
-              </b-tooltip>
+              <fa :icon="fas.faDoor" />
             </a>
           </li>
         </ul>
@@ -47,15 +39,19 @@
 
 <script>
 import Navbar from "../components/Navbar"
+import { fas } from '@fortawesome/free-solid-svg-icons'
 import netlifyIdentity from "netlify-identity-widget";
 import { mapActions, mapState } from "vuex";
 
 netlifyIdentity.init();
 
 export default {
-  computed: mapState({
-    isLoggedIn: state => state.user.currentUser
-  }),
+  computed: {
+    // mapState({isLoggedIn: state => state.user.currentUser}),
+    fas() {
+      return fas
+    }
+  },
   methods: {
     ...mapActions({
       setUser: 'user/setUser'

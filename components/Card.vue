@@ -8,11 +8,9 @@
       </header>
       <div class="card-content" v-bind:class="{ 'noIcon': noIcon }">
         <div v-if="!noIcon" class="content has-text-centered">
-          <b-icon
-            :icon="icon"
-            size="is-large"
-            type="is-primary"
-          />
+          <span class="icon is-large has-text-primary">
+            <fa :icon="icon" />
+          </span>
         </div>
          <div v-else class="content has-text-centered">
           <figure class="image is-128x128">

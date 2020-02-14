@@ -4,16 +4,17 @@
     <div class="container is-mobile columns">
       
       <div class="buttons">
-        <b-button tag="router-link"
-          to="/players/hitters"
-          type="is-link">
-          Hitters
-        </b-button>
-        <b-button tag="router-link"
-          to="/players/pitchers"
-          type="is-info">
-          Players
-        </b-button>
+        <a href="/players/hitters">
+          <button class="button is-danger">
+            Hitters
+          </button>
+        </a>
+        <br />
+        <a href="/players/pitchers">
+          <button class="button is-info">
+            Pitchers
+          </button>
+        </a>
       </div>
     </div>
   </section>

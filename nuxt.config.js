@@ -38,15 +38,15 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://buefy.github.io/#/documentation
-    'nuxt-buefy',
+    '@nuxtjs/bulma',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
     '@nuxtjs/apollo',
-    '@nuxtjs/auth'
+    '@nuxtjs/auth',
+    'nuxt-fontawesome'
   ],
   apollo: {
     clientConfigs: {
@@ -93,10 +93,20 @@ module.exports = {
     //   }
     // },
   },
+  fontawesome: {
+    component: 'fa'
+  },
   /*
   ** Build configuration
   */
   build: {
+    postcss: {
+      preset: {
+        features: {
+          customProperties: false
+        }
+      }
+    },
     /*
     ** You can extend webpack config here
     */

@@ -2,24 +2,29 @@
   <section class="section">
     <h2 class="title">Research</h2>
     <div class="columns is-mobile container">
-      <card title="The Blue Jays" icon="github-circle" noIcon>
+
+      <card title="The Blue Jays" image="jays.png">
         <b class="has-text-grey">
-          Some interesting data about the franchise
+          Interesting data about the Jays
         </b>
       </card>
 
-      <card title="Sabermetrics" icon="cellphone-link">
+      <card title="Sabermetrics" image="sabermetrics.png">
         <b class="has-text-grey">
           What the hell is Sabermetrics?
         </b> 
       </card>
 
-      <card title="Modern" icon="alert-decagram">
-        Something something something
+      <card title="Baseball History" image="cobb.jpg">
+        <b class="has-text-grey">
+          My historical ponderings
+        </b> 
       </card>
 
-      <card title="Lightweight" icon="arrange-bring-to-front">
-        No other internal dependency
+      <card title="Why We Love Baseball" image="beer.jpeg">
+        <b class="has-text-grey">
+          My historical ponderings
+        </b> 
       </card>
     </div>
   </section>

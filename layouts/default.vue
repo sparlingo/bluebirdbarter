@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Navbar />
     <section class="main-content columns is-1">
       <div class="column is-narrow section">
         <p class="menu-label is-hidden-touch">
@@ -14,17 +13,17 @@
           </li>
           <li>
             <nuxt-link to="/research" exact-active-class="is-active">
-              <fa :icon="faBook" />
+              <fa :icon="fas.faBook" />
             </nuxt-link>
           </li>
           <li>
             <nuxt-link to="/players" exact-active-class="is-active">
-              <fa :icon="fas.faBall" />
+              <fa :icon="fas.faBaseballBall" />
             </nuxt-link>
           </li>
           <li v-if="!isLoggedIn">
             <a v-on:click="triggerNetlifyIdentityAction('login')">
-              <fa :icon="fas.faDoor" />
+              <fa :icon="fas.faDoorClosed" />
             </a>
           </li>
         </ul>
@@ -38,7 +37,6 @@
 </template>
 
 <script>
-import Navbar from "../components/Navbar"
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import netlifyIdentity from "netlify-identity-widget";
 import { mapActions, mapState } from "vuex";
@@ -46,11 +44,15 @@ import { mapActions, mapState } from "vuex";
 netlifyIdentity.init();
 
 export default {
+ 
   computed: {
-    // mapState({isLoggedIn: state => state.user.currentUser}),
     fas() {
       return fas
-    }
+    },
+    ...mapState({
+        isLoggedIn: state => state.auth.isLoggedIn,
+      }
+    )
   },
   methods: {
     ...mapActions({

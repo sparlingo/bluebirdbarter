@@ -1,18 +1,10 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
+import { FaHome, FaBook, FaBaseballBall, FaDoorClosed } from 'react-icons/fa'
 
-import Header from "./header"
 import Footer from './footer'
 import './styles.scss'
-//import "./layout.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -27,8 +19,39 @@ const Layout = ({ children }) => {
 
   return (
     <div>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <main>{children}</main>
+      <section className="main-content columns is-1">
+        <div className="column is-narrow section">
+          <p className="menu-label is-hidden-touch">
+            Menu
+          </p>
+          <ul className="menu-list">
+            <li>
+              <Link to="/" exact-active-class="is-active">
+                <FaHome />
+              </Link>
+            </li>
+            <li>
+              <Link to="/research" exact-active-class="is-active">
+                <FaBook />
+              </Link>
+            </li>
+            <li>
+              <Link to="/players" exact-active-class="is-active">
+                <FaBaseballBall />
+              </Link>
+            </li>
+            <li>
+              <Link to="/login" exact-active-class="is-active">
+                <FaDoorClosed />
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        <div className="column is-12">
+          <main>{children}</main>
+        </div>
+      </section>
       <Footer />
     </div>
   )

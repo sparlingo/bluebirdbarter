@@ -1,26 +1,54 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <div className="container">
-      <div className="columns">
-        <div className="column">
-          <h2 className="title is-2">Level 2 heading</h2>
-          <p className="content">Cool content. Using Bulma!</p>
+const IndexPage = () => {
+  return (  
+    <Layout>
+      <SEO title="Home" />
+      <section className="hero is-fullheight is-info">
+        <div className="hero-head">
+          <div className="container">
+            <h1 className="title">Blue Bird Barter</h1>
+            <h2 className="subtitle">A baseball tranding game for nerds</h2>
+          </div>
         </div>
-        <div className="column is-four-fifths">
-          <h2 className="title is-2">Level 2 heading</h2>
-          <p className="content">This column is cool too!</p>
+        <div className="hero-body">
+          <div className="container">
+            <nav className="level">
+              <div className="level-item has-text-centered">
+                <div>
+                  <p className="heading">Tweets</p>
+                  <p className="title">3,456</p>
+                </div>
+              </div>
+              <div className="level-item has-text-centered">
+                <div>
+                  <p className="heading">Following</p>
+                  <p className="title">123</p>
+                </div>
+              </div>
+              <div className="level-item has-text-centered">
+                <div>
+                  <p className="heading">Followers</p>
+                  <p className="title">456K</p>
+                </div>
+              </div>
+              <div className="level-item has-text-centered">
+                <div>
+                  <p className="heading">Likes</p>
+                  <p className="title">789</p>
+                </div>
+              </div>
+            </nav>
+          </div>
         </div>
-      </div>
-    </div>
-  </Layout>
-)
+      </section>
+    </Layout>
+  )
+}
 
 export default IndexPage

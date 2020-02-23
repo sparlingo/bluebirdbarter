@@ -30,16 +30,16 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
-    {
-      resolve: 'gatsby-source-sanity',
-      options: {
-        projectId: '9rty98wh',
-        dataset: 'development',
-        // a token with read permissions is required
-        // if you have a private dataset
-        token: process.env.MY_SANITY_TOKEN,
-      },
-    },
+    // {
+    //   resolve: 'gatsby-source-sanity',
+    //   options: {
+    //     projectId: '9rty98wh',
+    //     dataset: 'development',
+    //     // a token with read permissions is required
+    //     // if you have a private dataset
+    //     token: process.env.MY_SANITY_TOKEN,
+    //   },
+    // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

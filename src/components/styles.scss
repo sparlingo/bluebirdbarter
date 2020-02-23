@@ -5,6 +5,9 @@ $title-color: #ff0000;
 
 @import "~bulma/bulma.sass";
 
+h1.title {
+  padding-top: 30px;
+}
 
 .center {
 	display: flex;

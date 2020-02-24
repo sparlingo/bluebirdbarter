@@ -8,17 +8,6 @@ module.exports = {
     github: `@sparlingo`,
     author: 'Kevin Sparling'
   },
-  // developMiddleware: app => {
-  //   app.use(
-  //     "/.netlify/functions/",
-  //     proxy({
-  //       target: "http://localhost:9000",
-  //       pathRewrite: {
-  //         "/.netlify/functions/": "",
-  //       },
-  //     })
-  //   )
-  // },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
@@ -33,8 +22,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `BBB`,
-        short_name: `starter`,
+        name: `Blue Bird Barter`,
+        short_name: `BBB`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
@@ -57,4 +46,14 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
+  developMiddleware: app => {
+    app.use("/.netlify/functions/", 
+      proxy({
+        target: "http://localhost:9000",
+        pathRewrite: {
+          "/.netlify/functions/": "",
+        },
+      })
+    )
+  },
 }

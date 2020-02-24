@@ -1,0 +1,5 @@
+{
+  "port": 8000,
+  "proxy": "http://localhost:9000",
+  "proxypaths": ["/.netlify/functions"]
+}

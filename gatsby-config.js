@@ -1,4 +1,4 @@
-var proxy = require("http-proxy-middleware")
+const proxy = require("http-proxy-middleware")
 
 module.exports = {
   siteMetadata: {
@@ -32,16 +32,14 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
-    // {
-    //   resolve: 'gatsby-source-sanity',
-    //   options: {
-    //     projectId: '9rty98wh',
-    //     dataset: 'development',
-    //     // a token with read permissions is required
-    //     // if you have a private dataset
-    //     token: process.env.MY_SANITY_TOKEN,
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        defaultLayouts: {
+          default: require.resolve(`./src/components/layout.js`),
+        }
+      }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

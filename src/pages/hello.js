@@ -7,17 +7,16 @@ class HelloPage extends Component {
   state = { message: null }
 
   componentDidMount() {
-    fetch('/.netlify/functions/hello')
-      .then(res => res.json())
-      .then(result => this.setState({ message: result.body.msg }))
+    fetch('/.netlify/functions/hello').then(response => response.json())
+      .then(result => this.setState({ message: result.msg }))
   }
 
   render() {
-    const { greeting } = this.state
+    const { message } = this.state
     return (
       <Layout>
         <h1>Hello Lambda!</h1>
-        <p>{greeting || 'loading...' }</p>
+        <p>{message || 'loading...'}</p>
         <Link to="/">Go back to the homepage</Link>
       </Layout>
     )

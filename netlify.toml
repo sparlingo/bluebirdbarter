@@ -1,4 +1,9 @@
 [build]
   command = "npm run build"
-  functions = "lambda"
+  functions = "functions-build"
   publish = "public"
+
+# [[redirects]]
+#   from = "/.netlify/functions/*"
+#   to = "http://localhost:9000/.netlify/functions/*"
+#   status = 200

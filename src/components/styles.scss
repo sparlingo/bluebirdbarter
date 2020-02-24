@@ -9,6 +9,22 @@ h1.title {
   padding-top: 30px;
 }
 
+@media screen and (max-width: 1023px) {
+  .navbar-item {
+    &.has-dropdown {
+      .navbar-dropdown {
+        display: none;
+      }
+      &.is-active {
+        .navbar-dropdown {
+					display: block;
+					flex-direction: row;
+        }
+      }
+   	}
+	}
+}
+
 .center {
 	display: flex;
 	justify-content: center;

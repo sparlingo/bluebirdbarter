@@ -1,4 +1,4 @@
-const proxy = require("http-proxy-middleware")
+//const proxy = require("http-proxy-middleware")
 
 module.exports = {
   siteMetadata: {
@@ -40,18 +40,24 @@ module.exports = {
         }
       }
     },
+    {
+      resolve: `gatsby-plugin-netlify-identity`,
+      options: {
+        url: `https://bluebirdbarter.netlify.com/`
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-  developMiddleware: app => {
-    app.use("/.netlify/functions/", 
-      proxy({
-        target: "http://localhost:9000",
-        pathRewrite: {
-          "/.netlify/functions/": "",
-        },
-      })
-    )
-  },
+  // developMiddleware: app => {
+  //   app.use("/.netlify/functions/", 
+  //     proxy({
+  //       target: "http://localhost:9000",
+  //       pathRewrite: {
+  //         "/.netlify/functions/": "",
+  //       },
+  //     })
+  //   )
+  // },
 }

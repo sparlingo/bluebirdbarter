@@ -7,6 +7,9 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.5.7",
     "@mdx-js/react": "^1.5.7",
+    "@reach/dialog": "^0.8.5",
+    "@reach/tabs": "^0.8.5",
+    "@reach/visually-hidden": "^0.8.2",
     "@types/react": "^16.9.22",
     "axios": "^0.19.2",
     "bulma": "^0.8.0",
@@ -17,6 +20,7 @@
     "gatsby-plugin-create-client-paths": "^2.1.22",
     "gatsby-plugin-manifest": "^2.2.39",
     "gatsby-plugin-mdx": "^1.0.73",
+    "gatsby-plugin-netlify-identity": "^0.0.3",
     "gatsby-plugin-offline": "^3.0.32",
     "gatsby-plugin-react-helmet": "^3.1.21",
     "gatsby-plugin-sass": "^2.1.29",
@@ -32,6 +36,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.9.0",
+    "react-netlify-identity-widget": "^0.2.7",
     "typescript": "^3.8.2",
     "webpack": "^4.41.6"
   },

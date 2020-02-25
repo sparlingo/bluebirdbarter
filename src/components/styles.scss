@@ -5,6 +5,17 @@ $title-color: #473838;
 
 @import "~bulma/bulma.sass";
 
+.card-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: top;
+	background-color: rgba(211, 211, 211, 0.938);
+	padding-top: 20px;
+	padding-left: 10px;
+	padding-bottom: 20px;
+}
+
 h1.title {
 	padding-top: 30px;
 	text-align: center;
@@ -12,8 +23,8 @@ h1.title {
 
 .card {
   display: inline-block;
-  width: 17rem;
-  height: 32rem;
+  width: 18rem;
+  height: 30rem;
   margin: 5px;
 }
 

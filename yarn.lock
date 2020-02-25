@@ -6585,6 +6585,14 @@ gatsby-source-filesystem@^2.1.48:
     valid-url "^1.0.9"
     xstate "^4.7.2"
 
+gatsby-source-sanity-transform-images@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/gatsby-source-sanity-transform-images/-/gatsby-source-sanity-transform-images-0.0.4.tgz#eaea05f83b82d5e1d1268865815f714eebd013e3"
+  integrity sha512-yfFeMTVSIyyGfYaFvsrmk/JFOYUKrU4unbqlEQ5qP90IxAybiBYGqM3EM/uiJFpMc6jjc//UAlUFL2iqF5mIWA==
+  dependencies:
+    babel-jest "^24.9.0"
+    jest "^24.9.0"
+
 gatsby-source-sanity@^5.0.5:
   version "5.0.5"
   resolved "https://registry.yarnpkg.com/gatsby-source-sanity/-/gatsby-source-sanity-5.0.5.tgz#7234d3229200b61979b927807c007a86c86e7b0d"
@@ -8956,7 +8964,7 @@ jest-worker@^24.0.0, jest-worker@^24.6.0, jest-worker@^24.9.0:
     merge-stream "^2.0.0"
     supports-color "^6.1.0"
 
-jest@^24.8.0:
+jest@^24.8.0, jest@^24.9.0:
   version "24.9.0"
   resolved "https://registry.yarnpkg.com/jest/-/jest-24.9.0.tgz#987d290c05a08b52c56188c1002e368edb007171"
   integrity sha512-YvkBL1Zm7d2B1+h5fHEOdyjCG+sGMz4f8D86/0HiqJ6MB4MnDc8FgP5vdWsGnemOQro7lnYo8UakZ3+5A0jxGw==

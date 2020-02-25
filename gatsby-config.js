@@ -1,4 +1,6 @@
-//const proxy = require("http-proxy-middleware")
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+})
 
 module.exports = {
   siteMetadata: {
@@ -16,6 +18,14 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+    {
+      resolve: 'gatsby-source-sanity',
+      options: {
+        projectId: '9rty98wh',
+        dataset: 'development',
+        token: process.env.MY_SANITY_TOKEN
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -50,14 +60,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-  // developMiddleware: app => {
-  //   app.use("/.netlify/functions/", 
-  //     proxy({
-  //       target: "http://localhost:9000",
-  //       pathRewrite: {
-  //         "/.netlify/functions/": "",
-  //       },
-  //     })
-  //   )
-  // },
 }

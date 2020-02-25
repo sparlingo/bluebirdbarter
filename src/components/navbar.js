@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 //import Link from 'gatsby'
 //import PropTypes from "prop-types"
+//import { useStaticQuery, graphql } from "gatsby"
 import { FaHome, FaBook, FaUser, FaSignInAlt } from 'react-icons/fa'
 import AuthBtn from './authBtn'
 
@@ -8,7 +9,8 @@ import AuthBtn from './authBtn'
 import './styles.scss'
 
 class Navbar extends Component {
-  
+
+
   state = { showMenu: false }
   toggleMenu = () => {
     this.setState({

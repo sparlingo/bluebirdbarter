@@ -26,6 +26,7 @@
     "gatsby-plugin-sass": "^2.1.29",
     "gatsby-plugin-sharp": "^2.4.0",
     "gatsby-source-filesystem": "^2.1.48",
+    "gatsby-source-sanity": "^5.0.5",
     "gatsby-transformer-sharp": "^2.3.14",
     "light-server": "^2.6.4",
     "netlify-identity-widget": "^1.5.6",
@@ -48,7 +49,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "develop": "yarn build && concurrently \"yarn start:lambda\" \"light-server -s public --config light-server.json --open\"",
+    "develop": "gatsby develop && concurrently \"yarn start:lambda\" \"light-server -s public --config light-server.json --open\"",
     "start": "run-p start:**",
     "start:app": "npm run develop",
     "start:lambda": "netlify-lambda serve functions",

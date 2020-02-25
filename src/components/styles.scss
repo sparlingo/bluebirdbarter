@@ -1,12 +1,20 @@
 @charset "utf-8";
 
 // If need, change your variables before importing Bulma
-$title-color: #ff0000;
+$title-color: #473838;
 
 @import "~bulma/bulma.sass";
 
 h1.title {
-  padding-top: 30px;
+	padding-top: 30px;
+	text-align: center;
+}
+
+.card {
+  display: inline-block;
+  width: 17rem;
+  height: 32rem;
+  margin: 5px;
 }
 
 @media screen and (max-width: 1023px) {

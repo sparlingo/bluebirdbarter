@@ -24,17 +24,17 @@ class Navbar extends Component {
     return (
       <nav className="navbar has-shadow" role="navigation" aria-label="main-navigation">
         <div className="navbar-start">
-          <a className="navbar-item">
+          <a className="navbar-item" href="/">
             Blue Bird Barter
           </a>
-          <a className="navbar-item">
+          <a className="navbar-item" href="#">
             <AuthBtn />
           </a>
          
         </div>
         <div className="navbar-end">
           <div className={`${menuActive}`}>
-            <a className="navbar-link" onClick={this.toggleMenu}>
+            <a className="navbar-link" href="#" onClick={this.toggleMenu}>
               Menu
             </a>
             <div className="navbar-dropdown is-right">

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 //import Link from 'gatsby'
 //import PropTypes from "prop-types"
 import { FaHome, FaBook, FaUser, FaSignInAlt } from 'react-icons/fa'
+import AuthBtn from './authBtn'
 
 
 import './styles.scss'
@@ -23,6 +24,9 @@ class Navbar extends Component {
         <div className="navbar-start">
           <a className="navbar-item">
             Blue Bird Barter
+          </a>
+          <a className="navbar-item">
+            <AuthBtn />
           </a>
          
         </div>

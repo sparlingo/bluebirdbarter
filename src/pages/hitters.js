@@ -5,18 +5,18 @@ import Img from 'gatsby-image'
 import Layout from '../components/layout'
 
 export default ({data}) => {
-  const pitchers = data.allSanityPitcher.edges
+  const hitters = data.allSanityHitter.edges
   return (
     <Layout>
-      <div id="allPitchers" className="card-container">
-        {pitchers.map(pitcher => 
+      <div id="allHitters" className="card-container">
+        {hitters.map(hitter => 
           <div className="card box">
             <div className="card-header columns">
               <div classname="media-left column">
-                  <Img fixed={pitcher.node.person.profile.asset.fixed} />
+                  <Img fixed={hitter.node.person.profile.asset.fixed} />
               </div>
               <div className="media-content column">
-                <p className="title">{pitcher.node.person.name}</p>
+                <p className="title">{hitter.node.person.name}</p>
               </div>
             </div>
             <div className="card-content">
@@ -30,20 +30,20 @@ export default ({data}) => {
                 <div className="field is-grouped">
                   <div className="control">
                     <div className="tags is-medium has-addons">
-                      <span className="tag is-dark">Weight</span>
-                      <span className="tag is-primary">{pitcher.node.person.weight}</span>
+                      <span className="tag is-dark">Position</span>
+                      <span className="tag is-primary">{hitter.node.position}</span>
                     </div>
                   </div>
                   <div className="control">
                     <div className="tags is-medium has-addons">
-                      <span className="tag is-dark">Height</span>
-                      <span className="tag is-info">{pitcher.node.person.height}</span>
+                      <span className="tag is-dark">Bats</span>
+                      <span className="tag is-info">{hitter.node.bats}</span>
                     </div>
                   </div>
                   <div className="control">
                     <div className="tags is-medium has-addons">
                       <span className="tag is-dark">Throws</span>
-                      <span className="tag is-danger">{pitcher.node.hand}</span>
+                      <span className="tag is-danger">{hitter.node.throws}</span>
                     </div>
                   </div>
                 </div>
@@ -57,12 +57,14 @@ export default ({data}) => {
 }
 
 export const query = graphql`
-  query PitchersQuery {
-    allSanityPitcher {
+  query HittersQuery {
+    allSanityHitter {
       edges {
         node {
           _id
-          hand
+          bats
+          throws
+          position
           person {
             name
             bbrefId

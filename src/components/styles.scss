@@ -2,7 +2,9 @@
 
 // If need, change your variables before importing Bulma
 $title-color: #473838;
-
+$card-footer-padding: 0rem;
+$card-content-padding: 0.3rem;
+$card-media-margin: 1rem;
 @import "~bulma/bulma.sass";
 
 .card-container {
@@ -23,9 +25,12 @@ h1.title {
 
 .card {
   display: inline-block;
-  width: 18rem;
-  height: 30rem;
+  width: 20rem;
   margin: 5px;
+}
+
+.card-content {
+	height: 12rem;
 }
 
 @media screen and (max-width: 1023px) {

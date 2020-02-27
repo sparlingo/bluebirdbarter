@@ -1,5 +1,5 @@
 import React from 'react'
-import {graphql} from 'gatsby'
+import {graphql, Link} from 'gatsby'
 import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
@@ -16,7 +16,8 @@ export default ({data}) => {
                   <Img fixed={pitcher.node.person.profile.asset.fixed} />
               </div>
               <div className="media-content column">
-                <p className="title">{pitcher.node.person.name}</p>
+                <p className="title is-4">{pitcher.node.person.name}</p>
+                <p className="subtitle"><Link to={`/pitcher/${pitcher.node.person.slug.current}`}>@{pitcher.node.person.slug.current}</Link></p>
               </div>
             </div>
             <div className="card-content">

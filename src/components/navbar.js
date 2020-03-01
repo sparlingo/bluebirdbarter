@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 //import Link from 'gatsby'
 //import PropTypes from "prop-types"
-//import { useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 import { FaHome, FaBook, FaUser, FaSignInAlt } from 'react-icons/fa'
 import AuthBtn from './authBtn'
 
@@ -24,32 +24,38 @@ class Navbar extends Component {
     return (
       <nav className="navbar has-shadow" role="navigation" aria-label="main-navigation">
         <div className="navbar-start">
-          <a className="navbar-item" href="/">
+          <Link to="/" className="navbar-item">
             Blue Bird Barter
-          </a>
-          <a className="navbar-item" href="#">
+          </Link>
+          <Link to="#" className="navbar-item">
             <AuthBtn />
-          </a>
+          </Link>
+          <Link to="/hitters" className="navbar-item">
+            <button className="button">The Mashers</button>
+          </Link>
+          <Link to="/pitchers" className="navbar-item">
+            <button className="button">The Hurlers</button>
+          </Link>
          
         </div>
         <div className="navbar-end">
           <div className={`${menuActive}`}>
-            <a className="navbar-link" href="#" onClick={this.toggleMenu}>
+            <Link to="#" className="navbar-link" onClick={this.toggleMenu}>
               Menu
-            </a>
+            </Link>
             <div className="navbar-dropdown is-right">
-              <a className="navbar-item is-tab">
+              <Link to="/" className="navbar-item is-tab">
                 <FaHome />
-              </a>
-              <a className="navbar-item is-tab">
+              </Link>
+              <Link to="/research" className="navbar-item is-tab">
                 <FaBook />
-              </a>
-              <a className="navbar-item is-tab">
+              </Link>
+              <Link to="/profile" className="navbar-item is-tab">
                 <FaUser />
-              </a>
-              <a className="navbar-item is-tab">
+              </Link>
+              <Link to="/login" className="navbar-item is-tab">
                 <FaSignInAlt />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -8,6 +8,7 @@ exports.createPages = async ({graphql, actions}) => {
           node {
             _id
             person {
+              bbrefId
               slug {
                 current
               }
@@ -42,7 +43,7 @@ exports.createPages = async ({graphql, actions}) => {
   }
  
   const hitters = hittersResult.data.allSanityHitter.edges || []
-  hitters.forEach((edge, index) => {
+  hitters.forEach((edge) => {
     const path = `/hitter/${edge.node.person.slug.current}`
  
     createPage({
@@ -53,7 +54,7 @@ exports.createPages = async ({graphql, actions}) => {
   })
 
   const pitchers = pitchersResult.data.allSanityPitcher.edges || []
-  pitchers.forEach((edge, index) => {
+  pitchers.forEach((edge) => {
     const path = `/pitcher/${edge.node.person.slug.current}`
 
     createPage({

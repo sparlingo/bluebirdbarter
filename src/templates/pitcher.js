@@ -13,7 +13,7 @@ export default ({data}) => {
             <h1 class="title">{pitcher.person.name}</h1>
             <h3 class="subtitle">{pitcher.person.bbrefId}</h3>
           </span>
-          <table className="table">
+          <table className="table is-fullwidth is-striped is-hoverable">
             <thead>
               <tr>
                 <th>Games</th>

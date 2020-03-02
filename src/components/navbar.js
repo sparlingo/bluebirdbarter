@@ -30,12 +30,7 @@ class Navbar extends Component {
           <Link to="#" className="navbar-item">
             <AuthBtn />
           </Link>
-          <Link to="/hitters" className="navbar-item">
-            <button className="button">The Mashers</button>
-          </Link>
-          <Link to="/pitchers" className="navbar-item">
-            <button className="button">The Hurlers</button>
-          </Link>
+          
          
         </div>
         <div className="navbar-end">
@@ -44,18 +39,34 @@ class Navbar extends Component {
               Menu
             </Link>
             <div className="navbar-dropdown is-right">
-              <Link to="/" className="navbar-item is-tab">
-                <FaHome />
-              </Link>
-              <Link to="/research" className="navbar-item is-tab">
-                <FaBook />
-              </Link>
-              <Link to="/profile" className="navbar-item is-tab">
-                <FaUser />
-              </Link>
-              <Link to="/login" className="navbar-item is-tab">
-                <FaSignInAlt />
-              </Link>
+              <div className="buttons is-centered">
+                  <Link to="/" className="navbar-item is-tab">
+                    <button className="button">
+                      <span class="icon"><FaHome /></span>
+                      <span>Home</span>
+                    </button>
+                  </Link>
+                  <Link to="/research" className="navbar-item is-tab">
+                    <button className="button">
+                      <span className="icon"><FaBook /></span>
+                      <span>Research</span>
+                    </button>
+                  </Link>
+                  <Link to="/profile" className="navbar-item is-tab">
+                    <button className="button">
+                      <span className="icon"><FaUser /></span>
+                      <span>Profile</span>
+                    </button>
+                </Link>
+              </div>
+              <div className="buttons is-centered">
+                <Link to="/hitters" className="navbar-item is-tab">
+                  <button className="button">The Mashers</button>
+                </Link>
+                <Link to="/pitchers" className="navbar-item is-tab">
+                  <button className="button">The Hurlers</button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

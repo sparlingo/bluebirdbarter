@@ -6,12 +6,24 @@ import SEO from "../components/seo"
 const ProfilePage = () => (
   <Layout>
     <SEO title="User Profile" />
-    <section className="section">
-      <h2 className="title">User Profile</h2>
-      <div className="columns is-mobile container">
-
-      </div>
-    </section>
+    <div className="container">
+      <aside className="menu">
+        <p className="menu-label">
+          User Settings
+        </p>
+        <ul className="menu-list">
+          <li>My Profile</li>
+        </ul>
+        <p className="menu-label">
+          Teams
+        </p>
+        <ul className="menu-list">
+          <li>Current Teams</li>
+          <li>Make A New Team</li>
+        </ul>
+      </aside>
+    </div>
+    
   </Layout>
 )
 

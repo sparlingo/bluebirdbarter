@@ -22,7 +22,7 @@ export default ({data}) => {
           <h1 className="subtitle">
             {hitter.person.bbrefId}
           </h1>
-          <table className="table">
+          <table className="table is-fullwidth is-striped is-hoverable">
             <thead>
               <tr>
                 <th>Games</th>

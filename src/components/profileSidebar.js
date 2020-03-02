@@ -1,12 +1,7 @@
 import React from 'react'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-
-const ProfilePage = () => (
-  <Layout>
-    <SEO title="User Profile" />
-    <div className="container">
+const ProfileSidebar = () => (
+    <div className="column is-narrow">
       <aside className="menu">
         <p className="menu-label">
           User Settings
@@ -21,10 +16,15 @@ const ProfilePage = () => (
           <li>Current Teams</li>
           <li>Make A New Team</li>
         </ul>
+        <p className="menu-label">
+          Leagues
+        </p>
+        <ul className="menu-list">
+          <li>Current Leagues</li>
+          <li>Start a New League</li>
+        </ul>
       </aside>
     </div>
-    
-  </Layout>
 )
 
-export default ProfilePage
+export default ProfileSidebar

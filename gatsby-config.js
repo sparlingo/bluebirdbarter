@@ -30,6 +30,18 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: "gatsby-theme-auth0",
+      options: {
+        domain: 'sparlingo.auth0.com',
+        clientID: 'yhBWDsauIwnk5mVonVFxHGLiUJzSEvbp',
+        redirectUri: 'https://bluebirdbarter.netlify.com/user/profile',
+        // audience: process.env.AUTH0_AUDIENCE, // Optional
+        // responseType: process.env.AUTH0_RESPONSE_TYPE, // Optional
+        // scope: process.env.AUTH0_SCOPE, // Optional
+        // callbackPath: "/auth/callback", // Optional
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Blue Bird Barter`,
@@ -50,14 +62,6 @@ module.exports = {
         }
       }
     },
-    {
-      resolve: `gatsby-plugin-netlify-identity`,
-      options: {
-        url: `https://bluebirdbarter.netlify.com/`
-      }
-    }
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`
   ],
 }

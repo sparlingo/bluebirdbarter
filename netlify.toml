@@ -1,6 +1,6 @@
 [build]
-  command = "npm run build"
-  functions = "functions-build"
+  command = "yarn build && yarn build-server"
+  functions = "functions/build"
   publish = "public"
 
 # [[redirects]]

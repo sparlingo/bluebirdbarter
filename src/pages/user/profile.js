@@ -16,7 +16,7 @@ export default () => {
     axios.get('.netlify/functions/get-all-users').then(result => {
       if (canceled === true) return
       if (status !== "loading")
-      if (result.status != 200) {
+      if (result.status !== 200) {
         console.error('Error loading notes')
         console.error(result)
         return
@@ -45,19 +45,21 @@ export default () => {
             ) : (
               <p>Loading usernames...</p>
             )}
-            <div className="field">
-              <label className="label">Username</label>
-              <div className="control has-icons-left has-icons-right">
-                <input className="input is-success" type="text" placeholder="Desired Username" value="" />
-                <span className="icon is-small is-left">
-                  <FaUser />
-                </span>
-                <span className="icon is-small is-right">
-                  <FaCheck />
-                </span>
+            <form method="POST">
+              <div className="field">
+                <label className="label">Username</label>
+                <div className="control has-icons-left has-icons-right">
+                  <input className="input is-success" type="text" placeholder="Desired Username" value="" />
+                  <span className="icon is-small is-left">
+                    <FaUser />
+                  </span>
+                  <span className="icon is-small is-right">
+                    <FaCheck />
+                  </span>
+                </div>
+                <p className="help is-success">This username is available</p>
               </div>
-              <p className="help is-success">This username is available</p>
-            </div>
+            </form>
           </div>
         </div>
       </div>

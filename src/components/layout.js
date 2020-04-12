@@ -2,20 +2,19 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Navbar from './navbar'
-import Footer from './footer'
-import './styles.scss'
+// import Footer from './footer'
+// import './styles.scss'
+import '../../node_modules/spectre.css/dist/spectre.min.css'
+import '../../node_modules/spectre.css/dist/spectre-exp.min.css'
 
 const Layout = ({ children }) => {
 
   return (
     <div>
       <Navbar />
-      <section className="main-content columns is-fullheight">
-        <div className="column is-12">
-          <main>{children}</main>
-        </div>
-      </section>
-      <Footer />
+      <div className="container">
+        <main>{children}</main>
+      </div>
     </div>
   )
 }

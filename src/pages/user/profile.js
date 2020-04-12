@@ -31,7 +31,7 @@ export default () => {
   return (
     <Layout>
      <SEO title="User Profile" />
-      <div className="container">
+      {/* <div className="container">
         <div className="columns">
           <ProfileSidebar />
           <div className="column is-half is-offset-one-fifth">
@@ -62,7 +62,7 @@ export default () => {
             </form>
           </div>
         </div>
-      </div>
+      </div> */}
     </Layout>
   ) 
 }

@@ -12,7 +12,7 @@ export default () => {
   return (
     //  {profile && <p>Hello `{profile.name}</p>}
    
-    <header className="navbar">
+    <header className="navbar bg-dark">
       <section className="navbar-section">
         <Link to="/" className="navbar-brand mr-1">Blue Bird Barter</Link>
         <Link to="/research" className="btn btn-link">Docs</Link>

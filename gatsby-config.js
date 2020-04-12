@@ -66,7 +66,6 @@ module.exports = {
         icon: `src/images/baseball_park.svg`
       },
     },
-    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {

@@ -33,6 +33,7 @@
     "webpack": "^4.41.6"
   },
   "devDependencies": {
+    "cross-env": "^7.0.2",
     "prettier": "^1.19.1"
   },
   "keywords": [
@@ -40,7 +41,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "develop": "gatsby develop",
+    "develop": "cross-env GATSBY_GRAPHQL_IDE=playground gatsby develop",
     "start": "gatsby start",
     "build": "gatsby build && netlify-lambda build functions/src",
     "build-server": "netlify-lambda build functions/src",

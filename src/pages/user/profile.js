@@ -6,8 +6,6 @@ import SEO from "../../components/seo"
 import { FaUser, FaCheck } from 'react-icons/fa'
 
 
-import ProfileSidebar from '../../components/profileSidebar'
-
 export default () => {
   const [status, setStatus] = useState("loading")
   const [usernames, setUsernames] = useState(null);
@@ -31,11 +29,41 @@ export default () => {
   return (
     <Layout>
      <SEO title="User Profile" />
-      {/* <div className="container">
-        <div className="columns">
+     <div className="container mt-2">
+      <ul className="nav">
+        <li className="nav-item">
+          <a href="#">My Profile</a>
+        </li>
+        <li className="nav-item">
+          <a href="#">My Teams</a>
+          <ul className="nav">
+            <li className="nav-item">
+              <a href="#">My Fab 9</a>
+            </li>
+            <li className="nav-item">
+              <a href="#">Drafted Teams</a>
+            </li>
+          </ul>
+        </li>
+        <li className="nav-item">
+          <a href="#">My Leagues</a>
+          <ul className="nav">
+            <li className="nav-item">
+              <a href="#">Active Leagues</a>
+            </li>
+            <li className="nav-item">
+              <a href="#">Past Leagues</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+     </div>
+     
+      {/* <div classNameName="container">
+        <div classNameName="columns">
           <ProfileSidebar />
-          <div className="column is-half is-offset-one-fifth">
-            <h1 className="title">My Profile</h1>
+          <div classNameName="column is-half is-offset-one-fifth">
+            <h1 classNameName="title">My Profile</h1>
             {usernames ? (
               <ul>
                 {usernames.map(username => (
@@ -46,18 +74,18 @@ export default () => {
               <p>Loading usernames...</p>
             )}
             <form method="POST">
-              <div className="field">
-                <label className="label">Username</label>
-                <div className="control has-icons-left has-icons-right">
-                  <input className="input is-success" type="text" placeholder="Desired Username" value="" />
-                  <span className="icon is-small is-left">
+              <div classNameName="field">
+                <label classNameName="label">Username</label>
+                <div classNameName="control has-icons-left has-icons-right">
+                  <input classNameName="input is-success" type="text" placeholder="Desired Username" value="" />
+                  <span classNameName="icon is-small is-left">
                     <FaUser />
                   </span>
-                  <span className="icon is-small is-right">
+                  <span classNameName="icon is-small is-right">
                     <FaCheck />
                   </span>
                 </div>
-                <p className="help is-success">This username is available</p>
+                <p classNameName="help is-success">This username is available</p>
               </div>
             </form>
           </div>

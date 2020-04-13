@@ -12,17 +12,17 @@ export default () => {
   return (
     //  {profile && <p>Hello `{profile.name}</p>}
    
-    <header className="navbar bg-dark">
+    <header className="navbar pl-1 pr-1 bg-dark">
       <section className="navbar-section">
-        <Link to="/" className="navbar-brand mr-1">Blue Bird Barter</Link>
-        <Link to="/research" className="btn btn-link">Docs</Link>
-        <Link to="/hitters" className="btn btn-link">Hitters</Link>
-        <Link to="/pitchers" className="btn btn-link">Pitchers</Link>
+        <Link to="/" className="navbar-brand mr-1 text-secondary">Blue Bird Barter</Link>
+        <Link to="/research" className="btn text-light btn-link">Docs</Link>
+        <Link to="/hitters" className="btn text-light btn-link">Hitters</Link>
+        <Link to="/pitchers" className="btn text-light btn-link">Pitchers</Link>
       </section>
       <section className="navbar-section">
         <div className="input-group input-inline">
           <input className="form-input" type="text" placeholder="search" />
-          <button className="btn btn-primary input-group-btn">Search</button>
+          <button className="btn btn-primary input-group-btn btn-success">Search</button>
         </div>
         {isLoggedIn ? (
           <button className="btn btn-link" onClick={AuthService.logout}>Logout</button>

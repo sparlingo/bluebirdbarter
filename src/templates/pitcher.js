@@ -8,7 +8,7 @@ export default ({data}) => {
   return (
     <Layout>
       <article>
-        <div className="container">
+        <div className="container mt-2">
           <span>
             <h1 class="title">{pitcher.person.name}</h1>
             <h3 class="subtitle">{pitcher.person.bbrefId}</h3>

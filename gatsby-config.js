@@ -42,16 +42,30 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-remark-images`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: "gatsby-theme-auth0",
       options: {
         domain: 'sparlingo.auth0.com',
         clientID: 'yhBWDsauIwnk5mVonVFxHGLiUJzSEvbp',
-        redirectUri: 'https://bluebirdbarter.netlify.com/user/profile',
+        redirectUri: 'http://localhost:8000',
         // audience: process.env.AUTH0_AUDIENCE, // Optional
         // responseType: process.env.AUTH0_RESPONSE_TYPE, // Optional
         // scope: process.env.AUTH0_SCOPE, // Optional
-        // callbackPath: "/auth/callback", // Optional
+        callbackPath: "/auth/callback/", // Optional
       },
     },
     {
@@ -65,14 +79,6 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/baseball_park.svg`
       },
-    },
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        defaultLayouts: {
-          default: require.resolve(`./src/components/layout.js`),
-        }
-      }
     },
     `gatsby-plugin-offline`
   ]

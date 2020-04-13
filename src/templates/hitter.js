@@ -15,14 +15,14 @@ export default ({data}) => {
   return (
     <Layout>
       <article>
-        <div className="container">
+        <div className="container mt-1">
           <h1 className="title">
             {hitter.person.name}
           </h1>
           <h1 className="subtitle">
             {hitter.person.bbrefId}
           </h1>
-          <table className="table is-fullwidth is-striped is-hoverable">
+          <table className="table table-striped table-hover">
             <thead>
               <tr>
                 <th>Games</th>

@@ -6,12 +6,9 @@ import { FaHome, FaBook, FaUser } from 'react-icons/fa'
 // import './styles.scss'
 
 export default () => {
-
   const { isLoggedIn, profile } = useAuth()
   
   return (
-    //  {profile && <p>Hello `{profile.name}</p>}
-   
     <header className="navbar pl-1 pr-1 bg-dark">
       <section className="navbar-section">
         <Link to="/" className="navbar-brand mr-1 text-secondary">Blue Bird Barter</Link>

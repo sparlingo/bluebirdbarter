@@ -38,7 +38,7 @@ export default () => {
           <a href="#">My Teams</a>
           <ul className="nav">
             <li className="nav-item">
-              <a href="#">My Fab 9</a>
+              <a href="#">My Fab 10</a>
             </li>
             <li className="nav-item">
               <a href="#">Drafted Teams</a>

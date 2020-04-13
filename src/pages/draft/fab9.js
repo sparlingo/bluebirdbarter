@@ -1,17 +1,18 @@
 import React from 'react'
 import {graphql, Link} from 'gatsby'
-import Img from 'gatsby-image'
+import { useAuth } from 'gatsby-theme-auth0'
 
 import Layout from '../../components/layout'
 
 export default ({data}) => {
+  const { profile } = useAuth()
 
   return (
     <Layout>
-      <h1 className="mt-1">All-time Favorite Jays</h1>
+      <h1 className="mt-1">Pick Your All-time Jays Team</h1>
       <div className="container mt-1">
         <ul className="step">
-          <li className="step-item">
+          <li className="step-item active">
             <a href="#" className="tooltip" data-tooltip="P">Pitcher</a>
           </li>
           <li className="step-item">
@@ -43,6 +44,7 @@ export default ({data}) => {
           </li>
         </ul>
       </div>
+      {profile && <h4>Hello {profile.name}</h4>}
     </Layout>
   )
 }

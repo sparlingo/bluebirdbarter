@@ -1,50 +1,54 @@
 import React from 'react'
 import {graphql, Link} from 'gatsby'
 import { useAuth } from 'gatsby-theme-auth0'
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
 import Layout from '../../components/layout'
 
 export default ({data}) => {
   const { profile } = useAuth()
+  //const pitchers = data.allSanityPitcher.edges
 
   return (
     <Layout>
-      <h1 className="mt-1">Pick Your All-time Jays Team</h1>
+      <span><h1 className="mt-1">Pick Your All-time Jays Team</h1></span>
       <div className="container mt-1">
         <ul className="step">
           <li className="step-item active">
-            <a href="#" className="tooltip" data-tooltip="P">Pitcher</a>
+            <a href="#sp" className="tooltip" data-tooltip="SP">Starting Pitcher</a>
           </li>
           <li className="step-item">
-            <a href="#" className="tooltip" data-tooltip="C">Catcher</a>
+            <a href="#rp" className="tooltip" data-tooltip="RP">Relief Pitcher</a>
           </li>
           <li className="step-item">
-            <a href="#" className="tooltip" data-tooltip="1B">First Base</a>
+            <a href="#c" className="tooltip" data-tooltip="C">Catcher</a>
           </li>
           <li className="step-item">
-            <a href="#" className="tooltip" data-tooltip="2B">Second Base</a>
+            <a href="#1b" className="tooltip" data-tooltip="1B">First Base</a>
           </li>
           <li className="step-item">
-            <a href="#" className="tooltip" data-tooltip="3B">Third Base</a>
+            <a href="#2b" className="tooltip" data-tooltip="2B">Second Base</a>
           </li>
           <li className="step-item">
-            <a href="#" className="tooltip" data-tooltip="SS">Shortstop</a>
+            <a href="#3b" className="tooltip" data-tooltip="3B">Third Base</a>
           </li>
           <li className="step-item">
-            <a href="#" className="tooltip" data-tooltip="LF">Left Field</a>
+            <a href="#ss" className="tooltip" data-tooltip="SS">Shortstop</a>
           </li>
           <li className="step-item">
-            <a href="#" className="tooltip" data-tooltip="CF">Centre Field</a>
+            <a href="#lf" className="tooltip" data-tooltip="LF">Left Field</a>
           </li>
           <li className="step-item">
-            <a href="#" className="tooltip" data-tooltip="RF">Right Field</a>
+            <a href="#cf" className="tooltip" data-tooltip="CF">Centre Field</a>
           </li>
           <li className="step-item">
-            <a href="#" className="tooltip" data-tooltip="DH">Designated Hitter</a>
+            <a href="#rf" className="tooltip" data-tooltip="RF">Right Field</a>
+          </li>
+          <li className="step-item">
+            <a href="#dh" className="tooltip" data-tooltip="DH">Designated Hitter</a>
           </li>
         </ul>
       </div>
-      {profile && <h4>Hello {profile.name}</h4>}
     </Layout>
   )
 }

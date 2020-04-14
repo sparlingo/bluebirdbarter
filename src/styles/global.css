@@ -14,5 +14,7 @@ body {
     flex-shrink: 0;
     position: fixed;
     padding: 20px;
+    min-width: 100%;
+    background: #dddddd;
+
 }
-  

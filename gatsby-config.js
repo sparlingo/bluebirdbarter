@@ -33,6 +33,17 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-graphql',
+      options: {
+        typeName: 'Fauna',
+        fieldName: 'fauna',
+        url: 'https://graphql.fauna.com/graphql',
+        headers: {
+          Authorization: `Bearer ${process.env.FAUNA_KEY}`
+        }
+      }
+    },
+    {
       resolve: 'gatsby-source-sanity',
       options: {
         projectId: '9rty98wh',

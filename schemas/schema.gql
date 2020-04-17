@@ -1,0 +1,10 @@
+type AllTimeTeam {
+  title: String!
+  description: String
+  owner: [User] @relation
+}
+
+type User {
+  username: String!
+  email: String!
+}

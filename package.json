@@ -1,6 +1,6 @@
 {
   "name": "blue-bird-barter",
-  "private": true,
+  "private": false,
   "description": "A site for Toronto Blue jays nerds, using Gatsby, with a Sanity.IO CMS",
   "version": "0.2.0",
   "author": "Kevin Sparling <kevinsparling@gmail.com>",
@@ -34,6 +34,7 @@
     "react-helmet": "^5.2.1",
     "react-hook-form": "^4.10.1",
     "react-icons": "^3.9.0",
+    "react-refresh": "^0.8.3",
     "spectre.css": "^0.5.8",
     "webpack": "^4.41.6"
   },
